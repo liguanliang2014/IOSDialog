@@ -170,7 +170,15 @@ public class IOSSheetDialog extends Dialog implements DialogInterface {
             mIosSheetDialog = create();
             mIosSheetDialog.show();
             return mIosSheetDialog;
-        } 
+        }
+
+        public boolean dismiss() {
+            if (mIosSheetDialog.isShowing()){
+                mIosSheetDialog.dismiss();
+                return true;
+            }
+            return false;
+        }
     }
     
     public static final class SheetItem {

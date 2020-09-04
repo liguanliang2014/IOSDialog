@@ -206,5 +206,13 @@ public class IOSDialog extends Dialog {
             mIosDialog.show();
             return mIosDialog;
         }
+
+        public boolean dismiss() {
+            if (mIosDialog.isShowing()){
+                mIosDialog.dismiss();
+                return true;
+            }
+            return false;
+        }
     }
 }
