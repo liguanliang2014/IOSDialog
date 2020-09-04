@@ -173,11 +173,15 @@ public class IOSSheetDialog extends Dialog implements DialogInterface {
         }
 
         public boolean dismiss() {
-            if (mIosSheetDialog.isShowing()){
+            if (isShowing()){
                 mIosSheetDialog.dismiss();
                 return true;
             }
             return false;
+        }
+
+        public boolean isShowing() {
+            return mIosSheetDialog.isShowing();
         }
     }
     
